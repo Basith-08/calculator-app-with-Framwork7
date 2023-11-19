@@ -10,7 +10,7 @@ Framework7 app created with following options:
   "type": [
     "web"
   ],
-  "name": "My App",
+  "name": "calculator app",
   "framework": "core",
   "template": "blank",
   "bundler": false,
