@@ -1,0 +1,17 @@
+{
+  "cwd": "D:\\framework7\\latihan",
+  "type": [
+    "web"
+  ],
+  "name": "My App",
+  "framework": "core",
+  "template": "blank",
+  "bundler": false,
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkMode": false,
+    "iconFonts": true
+  },
+  "customBuild": false
+}

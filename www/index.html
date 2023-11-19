@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!--
+  Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+      https://cordova.apache.org/docs/en/latest/
+  Some notes:
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+      * Enable inline JS: add 'unsafe-inline' to default-src
+  -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: content:"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <title>Kalkulator App</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+    <link rel="icon" href="assets/icons/favicon.png" />
+
+    <link rel="stylesheet" href="framework7/css/framework7-bundle.min.css" />
+    <link rel="stylesheet" href="css/icons.css" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="block-strong-ios block-outline-ios"></div>
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main view-init safe-areas">
+        <div class="page" data-name="home">
+          <!-- Top Navbar -->
+          <div class="navbar ">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="title">Kalkulator</div>
+              
+            </div>
+          </div>
+          <!-- Toolbar-->
+          <div class="toolbar toolbar-bottom">
+            <div class="toolbar-inner"></div>
+          </div>
+          <!-- Scrollable page content-->
+          <div class="page-content">
+            <div class="block block-strong-ios block-outline-ios">
+              <div class="list">
+                <ul>
+                  <div class="grid grid-cols-1 medium-grid-cols-2 grid-gap">
+                    <div>
+                      <!-- additional "item-input-outline" class -->
+                      <li class="item-content item-input item-input-outline">
+                        <div class="item-inner">
+                          <div class="item-title item-label">Bilangan 1</div>
+                          <div class="item-input-wrap">
+                            <input type="number" id="bil1" />
+                            <span class="input-clear-button"></span>
+                          </div>
+                        </div>
+                      </li>
+                    </div>
+
+                    <div>
+                      <li class="item-content item-input item-input-outline">
+                        <div class="item-inner">
+                          <div class="item-title item-label">Bilangan 2</div>
+                          <div class="item-input-wrap">
+                            <input type="number" id="bil2" />
+                            <span class="input-clear-button"></span>
+                          </div>
+                        </div>
+                      </li>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+              <div class="grid grid-cols-2 medium-grid-cols-4 grid-gap">
+                <div>
+                  <button
+                    class="col button button-fill color-green"
+                    id="tambah"
+                  >
+                    tambah
+                  </button>
+                </div>
+                <div>
+                  <button class="col button button-fill color-red" id="kurang">
+                    kurang
+                  </button>
+                </div>
+                <div>
+                  <button class="col button button-fill color-blue" id="bagi">
+                    bagi
+                  </button>
+                </div>
+                <div>
+                  <button class="col button button-fill color-teal" id="kali">
+                    kali
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Framework7 library -->
+    <script src="framework7/js/framework7-bundle.min.js"></script>
+
+    <!-- App routes -->
+    <script src="js/routes.js"></script>
+    <!-- App store -->
+    <script src="js/store.js"></script>
+    <!-- App scripts -->
+    <script src="js/app.js"></script>
+  </body>
+</html>
